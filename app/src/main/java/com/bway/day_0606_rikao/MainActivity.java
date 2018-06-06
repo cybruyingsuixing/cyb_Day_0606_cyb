@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -32,7 +33,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            switch (msg.what){
+                case 0:
+                    String json = (String) msg.obj;
+                    //解析json--Entity
+                    Gson gson = new Gson();
+                    UserBean userBean = gson.fromJson(json, UserBean.class);
+                    if (userBean.getCode().equals("0")){
+                        Toast.makeText(MainActivity.this,"成功--", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    }else {
+                        Toast.makeText(MainActivity.this,"失败--",Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case 1:
 
+                    break;
+            }
 
         }
     };
@@ -99,7 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 InputStream input = con.getInputStream();
                                 String json = ConUtils.in(input);
                                 //发送handler请求
-
+                                Message message = handler.obtainMessage();
+                                message.what=0;
+                                message.obj=json;
+                                handler.sendMessage(message);
 
                             }
                         } catch (Exception e) {
