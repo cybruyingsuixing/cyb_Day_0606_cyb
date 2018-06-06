@@ -17,10 +17,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-
+//杨运泽    大胖子
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-   //aaaaaaaaaaaaa
+
+      //aaaaaaaaaaaaa
     private  String url = "http://120.27.23.105/user/login";
 
     private EditText main_mobile,pwd;
