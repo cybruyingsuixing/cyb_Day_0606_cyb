@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
    //aaaaaaaaaaaaa
     private  String url = "http://120.27.23.105/user/login";
-
+    //asdfghjkl
     private EditText main_mobile,pwd;
     private Button btn_login,btn_reg;
 
