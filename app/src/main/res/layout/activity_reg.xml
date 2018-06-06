@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegActivity">
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:gravity="center"
+        android:textSize="25dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="#000"
+        />
+
+
+
+    <EditText
+        android:id="@+id/reg_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="11"
+        android:hint="请输入手机号"
+        android:layout_marginTop="55dp"
+        />
+
+
+    <EditText
+        android:id="@+id/reg_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="11"
+        android:hint="请输入密码"
+        android:layout_below="@id/reg_mobile"
+
+        />
+
+
+
+    <Button
+        android:id="@+id/zhuce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="立即注册"
+        android:textColor="#0099ff"
+        android:layout_below="@id/reg_pwd"
+        />
+
+</RelativeLayout>
