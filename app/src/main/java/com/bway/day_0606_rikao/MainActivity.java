@@ -20,7 +20,7 @@ import java.net.URLEncoder;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-
+   //aaaaaaaaaaaaa
     private  String url = "http://120.27.23.105/user/login";
 
     private EditText main_mobile,pwd;
